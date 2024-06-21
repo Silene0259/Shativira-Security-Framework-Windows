@@ -88,6 +88,31 @@ impl HostsFileAddresses {
             }
         }
     }
+    /// Checks whether addresses/hostnames is empty
+    pub fn has_no_addresses(&self) -> bool {
+        let map = &self.0;
+
+        if map.is_empty() {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    /// Checks whether it has address/hostnames on it
+    pub fn has_addresses(&self) -> bool {
+        let map = &self.0;
+
+        if map.is_empty() {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    pub fn get_all(&self) -> &HashMap<String, Vec<String>> {
+        return &self.0
+    }
 }
 mod tests {
     use super::*;
