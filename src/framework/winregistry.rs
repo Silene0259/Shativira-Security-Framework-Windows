@@ -28,8 +28,6 @@ impl ShativiraRegistryAPI {
 
         let regpath_split = registrypath.split("\\").into_iter();
 
-        hive::
-
 
     }
 }
